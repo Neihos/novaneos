@@ -18,7 +18,7 @@
 //-----> Gestion du header global <-----
 
 #siteHeader {
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: 99;
 }
@@ -160,7 +160,7 @@
       }
     }
   }
-  .open {
+  .close {
     display: none;
   }
 }

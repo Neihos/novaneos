@@ -54,7 +54,7 @@
     </div>
   </div>
 
-  <nav class="mobileNav open">
+  <nav class="mobileNav close">
       <?php
       // menu main déclaré dans functions.php
 			wp_nav_menu(array('theme_location' => 'main')); 

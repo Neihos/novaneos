@@ -9,21 +9,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Fonction pour ouvrir/fermer le menu
   function toggleMenu() {
-    burgerMenu.classList.toggle("open");
-    const isOpen = burgerMenu.classList.contains("open");
+    burgerMenu.classList.toggle("close");
+    const isclose = burgerMenu.classList.contains("close");
 
     // Met à jour l'affichage des icônes
-    crossIcon.classList.toggle("hiddenNow", isOpen);
-    burgerIcon.classList.toggle("hiddenNow", !isOpen);
+    crossIcon.classList.toggle("hiddenNow", isclose);
+    burgerIcon.classList.toggle("hiddenNow", !isclose);
 
     // Désactive le scroll quand le menu est ouvert
-    document.body.style.overflow = !isOpen ? "hidden" : "auto";
+    document.body.style.overflow = !isclose ? "hidden" : "auto";
   }
 
   // Fonction pour fermer le menu si la largeur dépasse 767px
   function checkWindowSize() {
-    if (window.innerWidth > 767) {
-      burgerMenu.classList.remove("open");
+    if (window.innerWidth <= 767 && !burgerMenu.classList.contains("close")) {
+      burgerMenu.classList.add("close");
       burgerIcon.classList.remove("hiddenNow");
       crossIcon.classList.add("hiddenNow");
       document.body.style.overflow = "auto";
