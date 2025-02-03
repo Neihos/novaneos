@@ -59,13 +59,13 @@ document.addEventListener("DOMContentLoaded", () => {
             const targetNumber = pourcentElement.querySelector("#number");
 
             if (pourcentElement.id === "pourcentBlock1") {
-              animateCounter(targetNumber, 78, 15);
+              animateCounter(targetNumber, 78, 10);
             } else if (pourcentElement.id === "pourcentBlock2") {
-              animateCounter(targetNumber, 93, 15);
+              animateCounter(targetNumber, 93, 14);
             } else if (pourcentElement.id === "pourcentBlock3") {
-              animateCounter(targetNumber, 62, 15);
+              animateCounter(targetNumber, 62, 22);
             } else if (pourcentElement.id === "pourcentBlock4") {
-              animateCounter(targetNumber, 90, 15);
+              animateCounter(targetNumber, 90, 22);
             }
 
             observer.unobserve(pourcentElement); // Stopper l'observation après le déclenchement

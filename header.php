@@ -64,7 +64,20 @@
 </header>
 
 <div class="accueil">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/digitalization.webp" alt="Illustration d'accueil">
+    <?php 
+      $image_id = 29;
+      $image_url = wp_get_attachment_image_url($image_id, 'full'); 
+      $srcset = wp_get_attachment_image_srcset($image_id, 'full');
+      $sizes = '(max-width: 2560px) 100vw, 1200px';
+      $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+
+      if ($image_url): ?>
+        <img src="<?php echo esc_url($image_url); ?>" 
+        srcset="<?php echo esc_attr($srcset); ?>" 
+        sizes="<?php echo esc_attr($sizes); ?>" 
+        alt="<?php echo esc_attr($alt_text); ?>">
+      <?php endif; ?>
+    </div>
 </div>
   
 </div>

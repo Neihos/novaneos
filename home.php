@@ -34,14 +34,26 @@ get_header();
                 <li><i class="fa-solid fa-check"></i><p>Adapté à tous les supports</p></li>
             </ul>
         </div>
-        <img src="wp-content\themes\novaneos\assets\images\homme-travaillant-sur-des-plans.webp" alt="illustration de travail méthodique">
+        <?php 
+            $image_id = 25;
+            $image_url = wp_get_attachment_image_url($image_id, 'full'); 
+            $srcset = wp_get_attachment_image_srcset($image_id, 'full');
+            $sizes = '(max-width: 2560px) 100vw, 1200px';
+            $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+
+            if ($image_url): ?>
+                <img src="<?php echo esc_url($image_url); ?>" 
+                srcset="<?php echo esc_attr($srcset); ?>" 
+                sizes="<?php echo esc_attr($sizes); ?>" 
+                alt="<?php echo esc_attr($alt_text); ?>">
+        <?php endif; ?>
     </div>
 </section>
 
 <section class="services">
     <div class="servicesContainer">
         <div class="servicesColonne">            
-                <div class="littleTitle"><p>Nos Services</p></div>
+                <h3 class="littleTitle">Nos Services</h3>
                 <div class="topServices">
                     <div class="service1">
                         <img class="cubeNovaneos" src="wp-content\themes\novaneos\assets\images\cubeNovaneos.webp" alt="cube avec logo Novaneos">
@@ -86,9 +98,7 @@ get_header();
 
 <section class="activityWeb">
     <div class="activityWebContainer">
-        <div class="littleTitle">
-            <p>L'activité avec le web, c'est aujourd'hui !!!</p>
-        </div>
+        <h3 class="littleTitle">L'activité avec le web, c'est aujourd'hui !!!</h3>
         <h2>L'importance d'internet pour votre activité en quelques chiffres :</h2>
         <div class="pourcentContainer">
             <div id="pourcentBlock1">
@@ -107,6 +117,30 @@ get_header();
                 <div id="number">0%</div>
                 <p>des TPE, PME ont un site web. (pour les micro-entreprises : 66 %)</p>
             </div>
+        </div>
+    </div>
+</section>
+
+<section class="humanFirst">
+    <div class="humanFirstContainer">        
+        <?php 
+            $image_id = 24;
+            $image_url = wp_get_attachment_image_url($image_id, 'full'); 
+            $srcset = wp_get_attachment_image_srcset($image_id, 'full');
+            $sizes = '(max-width: 2560px) 100vw, 1200px';
+            $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+
+            if ($image_url): ?>
+                <img src="<?php echo esc_url($image_url); ?>" 
+                srcset="<?php echo esc_attr($srcset); ?>" 
+                sizes="<?php echo esc_attr($sizes); ?>" 
+                alt="<?php echo esc_attr($alt_text); ?>">
+        <?php endif; ?>        
+        <div class="contentHuman">
+            <h3 class="littleTitle">L'humain avant tout</h3>
+            <h2>Vous êtes intéressé par nos services web, mais vous appréciez le contact direct ?</h2>
+            <p>Nous sommes sur la même longueur d’onde ! Ne perdez plus de temps, contactez-nous dès maintenant par téléphone ou remplissez notre formulaire en ligne.</p>
+            <a class="contactUs" href="http://">Formulaire en ligne</a>
         </div>
     </div>
 </section>

@@ -5,7 +5,7 @@
 //-----> Globale pour la page <-----
 
 .littleTitle {
-  color: #4f80ff;
+  color: #0b50fe;
   font-family: "Poppins", Sans-serif;
   font-size: clamp(1rem, 0.98rem + 0.091vw, 1.125rem);
   font-weight: 500;
@@ -60,7 +60,7 @@ h2 {
       p {
         font-size: clamp(1.125rem, 1.014rem + 0.491vw, 1.25rem);
         font-weight: 400;
-        color: #777777;
+        color: var(--quaternary-color);
         margin-bottom: 0.9rem;
       }
       .checkIt {
@@ -148,7 +148,7 @@ h2 {
     }
   }
   p {
-    color: #777777;
+    color: var(--quaternary-color);
     font-family: "Poppins", Sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -251,7 +251,7 @@ h2 {
     display: flex;
     width: 100%;
     flex-direction: column;
-    padding: 20px;
+    padding: clamp(0rem, -3.731rem + 7.782vw, 1.25rem);
     #number {
       color: var(--secondary-color);
       font-size: clamp(3.125rem, 1.743rem + 6.143vw, 4.688rem);
@@ -311,12 +311,67 @@ h2 {
   }
 }
 
+//-----> Section human first <-----
+
+.humanFirst {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 100px 0;
+  .humanFirstContainer {
+    display: flex;
+    margin: clamp(0rem, -6.25rem + 9.766vw, 9.375rem) 50px;
+    width: 100%;
+    max-width: 1330px;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    img {
+      width: 35%;
+      aspect-ratio: 4 / 3;
+    }
+    .contentHuman {
+      display: flex;
+      width: 65%;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 20px;
+      h2 {
+        margin: 0;
+        line-height: normal;
+      }
+      p {
+        font-size: clamp(0.875rem, 0.543rem + 1.474vw, 1.25rem);
+        color: var(--quaternary-color);
+      }
+      .littleTitle {
+        padding: 0;
+      }
+      .contactUs {
+        text-decoration: none;
+        color: var(--secondary-color);padding: 12px 40px;
+        border: 1px solid var(--secondary-color);
+        border-radius: 5px;
+        transition: all 0.5s ease;
+        &:hover {
+          color: white;
+          background-color: var(--secondary-color);
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 767px) {
   .partenaire .partenaireContainer {
     display: block;
   }
   .activityWeb .activityWebContainer {
     padding: 50px 10px;
+    margin-bottom: 50px;
   }
   .pourcentContainer {
     flex-direction: column;
@@ -327,4 +382,22 @@ h2 {
       line-height: normal;
     }
   }
+  .humanFirst{
+    margin: 0;
+   .humanFirstContainer {
+    flex-direction: column;
+    gap: 10px;
+    img {
+      margin-top: 50px;
+      width: 100%;
+    }
+    .contentHuman {
+      width: 100%;
+      align-items: center;
+      gap: 50px;
+    }
+    .contactUs {
+      margin-bottom: 30px;
+    }
+  }}
 }
