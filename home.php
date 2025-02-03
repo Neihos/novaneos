@@ -115,7 +115,7 @@ get_header();
             </div>
             <div id="pourcentBlock4">
                 <div id="number">0%</div>
-                <p>des TPE, PME ont un site web. (pour les micro-entreprises : 66 %)</p>
+                <p>des TPE, PME ont un site web.<br>(Pour les micro-entreprises: 66 %)</p>
             </div>
         </div>
     </div>
@@ -141,6 +141,94 @@ get_header();
             <h2>Vous êtes intéressé par nos services web, mais vous appréciez le contact direct ?</h2>
             <p>Nous sommes sur la même longueur d’onde ! Ne perdez plus de temps, contactez-nous dès maintenant par téléphone ou remplissez notre formulaire en ligne.</p>
             <a class="contactUs" href="http://">Formulaire en ligne</a>
+        </div>
+    </div>
+</section>
+
+<section class="support">
+    <div class="supportContainer">
+        <div class="supportMain">
+            <h3 class="littleTitle">Notre support</h3>
+            <h2>Création de site Wordpress</h2>
+            <p>WordPress se distingue comme le CMS dominant, propulsant plus de 40% des sites web mondiaux. Notre entreprise spécialisée vous offre la flexibilité évolutive, une gestion de contenu intuitive et une optimisation pour le référencement Google.</p>
+        </div>
+        <div class="blockSupport">
+            <div class="blockSupportAlone">
+                <?php 
+                    $image_id = 21;
+                    $image_url = wp_get_attachment_image_url($image_id, 'full'); 
+                    $srcset = wp_get_attachment_image_srcset($image_id, 'full');
+                    $sizes = '(max-width: 2560px) 100vw, 1200px';
+                    $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+
+                    if ($image_url): ?>
+                        <img src="<?php echo esc_url($image_url); ?>" 
+                        srcset="<?php echo esc_attr($srcset); ?>" 
+                        sizes="<?php echo esc_attr($sizes); ?>" 
+                        alt="<?php echo esc_attr($alt_text); ?>">
+                <?php endif; ?>
+                <div class="supportBlockTexte">
+                    <h3>WordPress</h3>
+                    <p>La plateforme incontournable pour la création de sites web, alimentant plus de 40% des sites à travers le monde.</p>
+                </div> 
+            </div>
+            <div class="blockSupportAlone">
+                <?php 
+                    $image_id = 21;
+                    $image_url = wp_get_attachment_image_url($image_id, 'full'); 
+                    $srcset = wp_get_attachment_image_srcset($image_id, 'full');
+                    $sizes = '(max-width: 2560px) 100vw, 1200px';
+                    $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+
+                    if ($image_url): ?>
+                        <img src="<?php echo esc_url($image_url); ?>" 
+                        srcset="<?php echo esc_attr($srcset); ?>" 
+                        sizes="<?php echo esc_attr($sizes); ?>" 
+                        alt="<?php echo esc_attr($alt_text); ?>">
+                <?php endif; ?> 
+                <div class="supportBlockTexte">
+                    <h3>Flexibilité Évolutive :</h3>
+                    <p>Avec WordPress, votre site peut croître avec votre entreprise, offrant une adaptabilité sans pareille pour répondre à vos besoins changeants.</p>
+                </div>    
+            </div>
+            <div class="blockSupportAlone">
+                <?php 
+                    $image_id = 21;
+                    $image_url = wp_get_attachment_image_url($image_id, 'full'); 
+                    $srcset = wp_get_attachment_image_srcset($image_id, 'full');
+                    $sizes = '(max-width: 2560px) 100vw, 1200px';
+                    $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+
+                    if ($image_url): ?>
+                        <img src="<?php echo esc_url($image_url); ?>" 
+                        srcset="<?php echo esc_attr($srcset); ?>" 
+                        sizes="<?php echo esc_attr($sizes); ?>" 
+                        alt="<?php echo esc_attr($alt_text); ?>">
+                <?php endif; ?> 
+                <div class="supportBlockTexte">
+                    <h3>Gestion de Contenu Intuitive :</h3>
+                    <p>Grâce à WordPress, la mise à jour de votre site est simplifiée et accessible à tous, même sans expérience en programmation.</p>
+                </div>
+            </div>
+            <div class="blockSupportAlone">
+                <?php 
+                    $image_id = 21;
+                    $image_url = wp_get_attachment_image_url($image_id, 'full'); 
+                    $srcset = wp_get_attachment_image_srcset($image_id, 'full');
+                    $sizes = '(max-width: 2560px) 100vw, 1200px';
+                    $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+
+                    if ($image_url): ?>
+                        <img src="<?php echo esc_url($image_url); ?>" 
+                        srcset="<?php echo esc_attr($srcset); ?>" 
+                        sizes="<?php echo esc_attr($sizes); ?>" 
+                        alt="<?php echo esc_attr($alt_text); ?>">
+                <?php endif; ?> 
+                <div class="supportBlockTexte">
+                    <h3>Optimisation Google Facilitée :</h3>
+                    <p>WordPress offre des outils intégrés pour améliorer votre référencement, mais une agence SEO peut vous aider à exploiter pleinement ces fonctionnalités et à maximiser votre visibilité en ligne.</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>

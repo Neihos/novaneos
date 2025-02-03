@@ -223,7 +223,7 @@ h2 {
 }
 
 .partenaire {
-  background-color: rgba(0, 85, 255, 0.1215686275);
+  background-color: var(--quinary-color);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -394,7 +394,7 @@ h2 {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 85, 255, 0.1215686275);
+  background-color: var(--quinary-color);
 }
 .activityWeb .activityWebContainer {
   display: flex;
@@ -439,52 +439,11 @@ h2 {
 .pourcentContainer #pourcentBlock3 p,
 .pourcentContainer #pourcentBlock4 p {
   font-size: 19px;
-  line-height: 2.5;
+  line-height: 1.5;
   text-align: center;
+  color: var(--quaternary-color);
 }
 
-@media (max-width: 1024px) {
-  .topServices {
-    flex-direction: column;
-    align-items: center;
-  }
-  .topServices div {
-    width: 100%;
-    margin-bottom: 0;
-  }
-  .topServices div:nth-child(4), .topServices div:nth-child(5) {
-    width: 100%;
-  }
-  .topServices div .cubeNovaneos {
-    width: 20%;
-  }
-  .topServices div p {
-    font-size: clamp(1rem, 0.864rem + 0.602vw, 1.25rem);
-  }
-  .topServices .service1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-  .topServices .service1 .titleService,
-  .topServices .service1 p {
-    text-align: center;
-  }
-  .topServices .service2 .cubeNovaneos .move {
-    animation: fadeInRight 1.5s ease forwards;
-  }
-  .topServices .service3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-  .topServices .service3 .titleService,
-  .topServices .service3 p {
-    text-align: center;
-  }
-}
 .humanFirst {
   display: flex;
   justify-content: center;
@@ -538,6 +497,119 @@ h2 {
   background-color: var(--secondary-color);
 }
 
+.support {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--quinary-color);
+}
+.support .supportContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 100px 40px;
+}
+.support .supportContainer .supportMain {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding-right: 50px;
+}
+.support .supportContainer .supportMain h2 {
+  margin: 10px 0;
+}
+.support .supportContainer .supportMain .littleTitle {
+  padding: 0;
+}
+.support .supportContainer .supportMain p {
+  color: var(--quaternary-color);
+  font-size: 16px;
+}
+.support .blockSupport {
+  width: calc(60% - 20px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.support .blockSupport .blockSupportAlone {
+  width: 46%;
+  display: flex;
+  flex-direction: column;
+}
+.support .blockSupport .blockSupportAlone img {
+  width: 70px;
+  margin-bottom: 10px;
+}
+.support .blockSupport .blockSupportAlone .supportBlockTexte {
+  display: flex;
+  height: 100%;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.support .blockSupport .blockSupportAlone .supportBlockTexte h3 {
+  color: var(--primary-color);
+}
+.support .blockSupport .blockSupportAlone .supportBlockTexte p {
+  color: var(--quaternary-color);
+}
+
+@media (max-width: 1024px) {
+  .topServices {
+    flex-direction: column;
+    align-items: center;
+  }
+  .topServices div {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .topServices div:nth-child(4), .topServices div:nth-child(5) {
+    width: 100%;
+  }
+  .topServices div .cubeNovaneos {
+    width: 20%;
+  }
+  .topServices div p {
+    font-size: clamp(1rem, 0.864rem + 0.602vw, 1.25rem);
+  }
+  .topServices .service1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .topServices .service1 .titleService,
+  .topServices .service1 p {
+    text-align: center;
+  }
+  .topServices .service2 .cubeNovaneos .move {
+    animation: fadeInRight 1.5s ease forwards;
+  }
+  .topServices .service3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .topServices .service3 .titleService,
+  .topServices .service3 p {
+    text-align: center;
+  }
+  .support .supportContainer {
+    flex-direction: column;
+  }
+  .support .supportContainer .supportMain {
+    width: 80%;
+    margin-bottom: 40px;
+    padding: 0;
+  }
+  .support .supportContainer .blockSupport {
+    width: 80%;
+  }
+}
 @media (max-width: 767px) {
   .partenaire .partenaireContainer {
     display: block;
@@ -574,12 +646,25 @@ h2 {
   .humanFirst .humanFirstContainer .contactUs {
     margin-bottom: 30px;
   }
+  .support .supportContainer {
+    padding: 50px;
+  }
+  .support .supportContainer .supportMain {
+    width: 100%;
+  }
+  .support .supportContainer .blockSupport {
+    width: 100%;
+  }
+  .support .supportContainer .blockSupport .blockSupportAlone {
+    width: 100%;
+  }
 }
 :root {
   --primary-color: #343f5a;
   --secondary-color: #4f80ff;
   --tertiary-color: #0693e3;
   --quaternary-color: #616161;
+  --quinary-color: rgba(0, 85, 255, 0.1215686275);
 }
 
 .hiddenNow {
