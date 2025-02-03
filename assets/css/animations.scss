@@ -10,29 +10,32 @@
 @keyframes fadeInLeft {
     0% {
         transform: translateX(-300px);
+        opacity: 1;
     }
     100% {
         transform: translateX(0);
+        opacity: 1;
     }
-    @include opa
 }
 
 @keyframes fadeInRight {
     0% {
         transform: translateX(300px);
+        opacity: 1;
     }
     100% {
         transform: translateX(0);
-    }
-    @include opa
+        opacity: 1;
+    }   
 }
 
 @keyframes fadeInDown {
     0% {
         transform: translateY(-300px);
+        opacity: 1;
     }
     100% {
         transform: translateY(0);
-    }
-    @include opa
+        opacity: 1;
+    } 
 }

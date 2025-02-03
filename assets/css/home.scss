@@ -14,21 +14,30 @@
   padding-top: 50px;
 }
 
+h2 {
+  color: #343f5a;
+  font-family: "Poppins", Sans-serif;
+  font-size: clamp(1.375rem, 1.109rem + 1.182vw, 3rem);
+  font-weight: 500;
+  line-height: 1.3em;
+  margin: 30px 0;
+}
+
 //-----> Section citation <-----
 
 .citation {
-    display: flex;
-    width: 100%;
-    padding: 50px;
-    justify-content: center;
-    p {
-        font-size: clamp(1.5rem, 1.183rem + 1.409vw, 3.438rem);
-        font-weight: 600;
-        text-align: center;
-        max-width: 1330px;
-        line-height: 1.5;
-        color: #2D2D2D;
-    }
+  display: flex;
+  width: 100%;
+  padding: 50px;
+  justify-content: center;
+  p {
+    font-size: clamp(1.5rem, 1.183rem + 1.409vw, 3.438rem);
+    font-weight: 600;
+    text-align: center;
+    max-width: 1330px;
+    line-height: 1.5;
+    color: #2d2d2d;
+  }
 }
 
 //-----> Section partenaire digital <-----
@@ -48,14 +57,6 @@
     padding: clamp(0rem, -0.511rem + 2.273vw, 3.125rem);
     .partenaireTexte {
       width: 100%;
-      h2 {
-        color: #343f5a;
-        font-family: "Poppins", Sans-serif;
-        font-size: clamp(1.375rem, 1.109rem + 1.182vw, 3rem);
-        font-weight: 500;
-        line-height: 1.3em;
-        margin: 30px 0;
-      }
       p {
         font-size: clamp(1.125rem, 1.014rem + 0.491vw, 1.25rem);
         font-weight: 400;
@@ -204,6 +205,66 @@
   }
 }
 
+//-----> Section activité Web <-----
+
+.activityWeb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("../images/map.webp") no-repeat center / cover;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #0055ff1f;
+  }
+  .activityWebContainer {
+    display: flex;
+    width: 100%;
+    max-width: 1064px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 20px;
+    .littleTitle {
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+    }
+  }
+}
+.pourcentContainer {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  #pourcentBlock1,
+  #pourcentBlock2,
+  #pourcentBlock3,
+  #pourcentBlock4 {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 20px;
+    #number {
+      color: var(--secondary-color);
+      font-size: clamp(3.125rem, 1.743rem + 6.143vw, 4.688rem);
+      text-align: center;
+    }
+    p {
+      font-size: 19px;
+      line-height: 2.5;
+      text-align: center;
+    }
+  }
+}
+
 //-----> Section responsive <-----
 
 @media (max-width: 1024px) {
@@ -212,9 +273,13 @@
     align-items: center;
     div {
       width: 100%;
+      margin-bottom: 0;
       &:nth-child(4),
       &:nth-child(5) {
         width: 100%;
+      }
+      .cubeNovaneos {
+        width: 20%;
       }
       p {
         font-size: clamp(1rem, 0.864rem + 0.602vw, 1.25rem);
@@ -246,8 +311,20 @@
   }
 }
 
-@media(max-width: 767px){
+@media (max-width: 767px) {
   .partenaire .partenaireContainer {
     display: block;
+  }
+  .activityWeb .activityWebContainer {
+    padding: 50px 10px;
+  }
+  .pourcentContainer {
+    flex-direction: column;
+    #pourcentBlock1 p,
+    #pourcentBlock2 p,
+    #pourcentBlock3 p,
+    #pourcentBlock4 p {
+      line-height: normal;
+    }
   }
 }

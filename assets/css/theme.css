@@ -7,42 +7,30 @@
 @keyframes fadeInLeft {
   0% {
     transform: translateX(-300px);
+    opacity: 1;
   }
   100% {
     transform: translateX(0);
-  }
-  from {
-    opacity: 0;
-  }
-  to {
     opacity: 1;
   }
 }
 @keyframes fadeInRight {
   0% {
     transform: translateX(300px);
+    opacity: 1;
   }
   100% {
     transform: translateX(0);
-  }
-  from {
-    opacity: 0;
-  }
-  to {
     opacity: 1;
   }
 }
 @keyframes fadeInDown {
   0% {
     transform: translateY(-300px);
+    opacity: 1;
   }
   100% {
     transform: translateY(0);
-  }
-  from {
-    opacity: 0;
-  }
-  to {
     opacity: 1;
   }
 }
@@ -209,6 +197,15 @@
   padding-top: 50px;
 }
 
+h2 {
+  color: #343f5a;
+  font-family: "Poppins", Sans-serif;
+  font-size: clamp(1.375rem, 1.109rem + 1.182vw, 3rem);
+  font-weight: 500;
+  line-height: 1.3em;
+  margin: 30px 0;
+}
+
 .citation {
   display: flex;
   width: 100%;
@@ -221,7 +218,7 @@
   text-align: center;
   max-width: 1330px;
   line-height: 1.5;
-  color: #2D2D2D;
+  color: #2d2d2d;
 }
 
 .partenaire {
@@ -241,14 +238,6 @@
 }
 .partenaire .partenaireContainer .partenaireTexte {
   width: 100%;
-}
-.partenaire .partenaireContainer .partenaireTexte h2 {
-  color: #343f5a;
-  font-family: "Poppins", Sans-serif;
-  font-size: clamp(1.375rem, 1.109rem + 1.182vw, 3rem);
-  font-weight: 500;
-  line-height: 1.3em;
-  margin: 30px 0;
 }
 .partenaire .partenaireContainer .partenaireTexte p {
   font-size: clamp(1.125rem, 1.014rem + 0.491vw, 1.25rem);
@@ -392,6 +381,67 @@
   animation: fadeInRight 1.5s ease forwards;
 }
 
+.activityWeb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/map.webp") no-repeat center/cover;
+  position: relative;
+}
+.activityWeb::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 85, 255, 0.1215686275);
+}
+.activityWeb .activityWebContainer {
+  display: flex;
+  width: 100%;
+  max-width: 1064px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 150px 20px;
+}
+.activityWeb .activityWebContainer .littleTitle {
+  text-align: center;
+}
+.activityWeb .activityWebContainer h2 {
+  text-align: center;
+}
+
+.pourcentContainer {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+.pourcentContainer #pourcentBlock1,
+.pourcentContainer #pourcentBlock2,
+.pourcentContainer #pourcentBlock3,
+.pourcentContainer #pourcentBlock4 {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 20px;
+}
+.pourcentContainer #pourcentBlock1 #number,
+.pourcentContainer #pourcentBlock2 #number,
+.pourcentContainer #pourcentBlock3 #number,
+.pourcentContainer #pourcentBlock4 #number {
+  color: var(--secondary-color);
+  font-size: clamp(3.125rem, 1.743rem + 6.143vw, 4.688rem);
+  text-align: center;
+}
+.pourcentContainer #pourcentBlock1 p,
+.pourcentContainer #pourcentBlock2 p,
+.pourcentContainer #pourcentBlock3 p,
+.pourcentContainer #pourcentBlock4 p {
+  font-size: 19px;
+  line-height: 2.5;
+  text-align: center;
+}
+
 @media (max-width: 1024px) {
   .topServices {
     flex-direction: column;
@@ -399,9 +449,13 @@
   }
   .topServices div {
     width: 100%;
+    margin-bottom: 0;
   }
   .topServices div:nth-child(4), .topServices div:nth-child(5) {
     width: 100%;
+  }
+  .topServices div .cubeNovaneos {
+    width: 20%;
   }
   .topServices div p {
     font-size: clamp(1rem, 0.864rem + 0.602vw, 1.25rem);
@@ -433,6 +487,18 @@
 @media (max-width: 767px) {
   .partenaire .partenaireContainer {
     display: block;
+  }
+  .activityWeb .activityWebContainer {
+    padding: 50px 10px;
+  }
+  .pourcentContainer {
+    flex-direction: column;
+  }
+  .pourcentContainer #pourcentBlock1 p,
+  .pourcentContainer #pourcentBlock2 p,
+  .pourcentContainer #pourcentBlock3 p,
+  .pourcentContainer #pourcentBlock4 p {
+    line-height: normal;
   }
 }
 :root {

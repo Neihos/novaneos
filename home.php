@@ -84,4 +84,31 @@ get_header();
     </div>
 </section>
 
+<section class="activityWeb">
+    <div class="activityWebContainer">
+        <div class="littleTitle">
+            <p>L'activité avec le web, c'est aujourd'hui !!!</p>
+        </div>
+        <h2>L'importance d'internet pour votre activité en quelques chiffres :</h2>
+        <div class="pourcentContainer">
+            <div id="pourcentBlock1">
+                <div id="number">0%</div>
+                <p>des entreprises déclarent que leur site web est leur principal canal de génération de leads.</p>
+            </div>
+            <div id="pourcentBlock2">
+                <div id="number">0%</div>
+                <p>des internautes utilisent internet pour rechercher des informations.</p>
+            </div>
+            <div id="pourcentBlock3">
+                <div id="number">0%</div>
+                <p>plus efficace : le marketing digital vs le marketing traditionnel.</p>
+            </div>
+            <div id="pourcentBlock4">
+                <div id="number">0%</div>
+                <p>des TPE, PME ont un site web. (pour les micro-entreprises : 66 %)</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <?php get_footer(); ?>
