@@ -6,6 +6,10 @@
     align-items: center;
 }
 
+@mixin fontNormal {
+    font-size: 18px;
+}
+
 //-----> Partie animations <-----
 
 @mixin opa {

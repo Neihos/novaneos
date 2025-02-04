@@ -10,6 +10,9 @@
  */
 
 get_header(); 
+
+// Inclure le fichier avec les données du logo
+include('template_parts/home_parts.php');
 ?>
 
 <div class="main-container">
@@ -34,19 +37,7 @@ get_header();
                 <li><i class="fa-solid fa-check"></i><p>Adapté à tous les supports</p></li>
             </ul>
         </div>
-        <?php 
-            $image_id = 25;
-            $image_url = wp_get_attachment_image_url($image_id, 'full'); 
-            $srcset = wp_get_attachment_image_srcset($image_id, 'full');
-            $sizes = '(max-width: 2560px) 100vw, 1200px';
-            $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
-
-            if ($image_url): ?>
-                <img src="<?php echo esc_url($image_url); ?>" 
-                srcset="<?php echo esc_attr($srcset); ?>" 
-                sizes="<?php echo esc_attr($sizes); ?>" 
-                alt="<?php echo esc_attr($alt_text); ?>">
-        <?php endif; ?>
+        <?php echo get_image_html(25); ?>
     </div>
 </section>
 
@@ -123,19 +114,7 @@ get_header();
 
 <section class="humanFirst">
     <div class="humanFirstContainer">        
-        <?php 
-            $image_id = 24;
-            $image_url = wp_get_attachment_image_url($image_id, 'full'); 
-            $srcset = wp_get_attachment_image_srcset($image_id, 'full');
-            $sizes = '(max-width: 2560px) 100vw, 1200px';
-            $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
-
-            if ($image_url): ?>
-                <img src="<?php echo esc_url($image_url); ?>" 
-                srcset="<?php echo esc_attr($srcset); ?>" 
-                sizes="<?php echo esc_attr($sizes); ?>" 
-                alt="<?php echo esc_attr($alt_text); ?>">
-        <?php endif; ?>        
+        <?php echo get_image_html(24); ?>        
         <div class="contentHuman">
             <h3 class="littleTitle">L'humain avant tout</h3>
             <h2>Vous êtes intéressé par nos services web, mais vous appréciez le contact direct ?</h2>
@@ -154,76 +133,28 @@ get_header();
         </div>
         <div class="blockSupport">
             <div class="blockSupportAlone">
-                <?php 
-                    $image_id = 21;
-                    $image_url = wp_get_attachment_image_url($image_id, 'full'); 
-                    $srcset = wp_get_attachment_image_srcset($image_id, 'full');
-                    $sizes = '(max-width: 2560px) 100vw, 1200px';
-                    $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
-
-                    if ($image_url): ?>
-                        <img src="<?php echo esc_url($image_url); ?>" 
-                        srcset="<?php echo esc_attr($srcset); ?>" 
-                        sizes="<?php echo esc_attr($sizes); ?>" 
-                        alt="<?php echo esc_attr($alt_text); ?>">
-                <?php endif; ?>
+                <?php echo get_image_html(21); ?>
                 <div class="supportBlockTexte">
                     <h3>WordPress</h3>
                     <p>La plateforme incontournable pour la création de sites web, alimentant plus de 40% des sites à travers le monde.</p>
                 </div> 
             </div>
             <div class="blockSupportAlone">
-                <?php 
-                    $image_id = 21;
-                    $image_url = wp_get_attachment_image_url($image_id, 'full'); 
-                    $srcset = wp_get_attachment_image_srcset($image_id, 'full');
-                    $sizes = '(max-width: 2560px) 100vw, 1200px';
-                    $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
-
-                    if ($image_url): ?>
-                        <img src="<?php echo esc_url($image_url); ?>" 
-                        srcset="<?php echo esc_attr($srcset); ?>" 
-                        sizes="<?php echo esc_attr($sizes); ?>" 
-                        alt="<?php echo esc_attr($alt_text); ?>">
-                <?php endif; ?> 
+                <?php echo get_image_html(21); ?> 
                 <div class="supportBlockTexte">
                     <h3>Flexibilité Évolutive :</h3>
                     <p>Avec WordPress, votre site peut croître avec votre entreprise, offrant une adaptabilité sans pareille pour répondre à vos besoins changeants.</p>
                 </div>    
             </div>
             <div class="blockSupportAlone">
-                <?php 
-                    $image_id = 21;
-                    $image_url = wp_get_attachment_image_url($image_id, 'full'); 
-                    $srcset = wp_get_attachment_image_srcset($image_id, 'full');
-                    $sizes = '(max-width: 2560px) 100vw, 1200px';
-                    $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
-
-                    if ($image_url): ?>
-                        <img src="<?php echo esc_url($image_url); ?>" 
-                        srcset="<?php echo esc_attr($srcset); ?>" 
-                        sizes="<?php echo esc_attr($sizes); ?>" 
-                        alt="<?php echo esc_attr($alt_text); ?>">
-                <?php endif; ?> 
+                <?php echo get_image_html(21); ?> 
                 <div class="supportBlockTexte">
                     <h3>Gestion de Contenu Intuitive :</h3>
                     <p>Grâce à WordPress, la mise à jour de votre site est simplifiée et accessible à tous, même sans expérience en programmation.</p>
                 </div>
             </div>
             <div class="blockSupportAlone">
-                <?php 
-                    $image_id = 21;
-                    $image_url = wp_get_attachment_image_url($image_id, 'full'); 
-                    $srcset = wp_get_attachment_image_srcset($image_id, 'full');
-                    $sizes = '(max-width: 2560px) 100vw, 1200px';
-                    $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
-
-                    if ($image_url): ?>
-                        <img src="<?php echo esc_url($image_url); ?>" 
-                        srcset="<?php echo esc_attr($srcset); ?>" 
-                        sizes="<?php echo esc_attr($sizes); ?>" 
-                        alt="<?php echo esc_attr($alt_text); ?>">
-                <?php endif; ?> 
+                <?php echo get_image_html(21); ?> 
                 <div class="supportBlockTexte">
                     <h3>Optimisation Google Facilitée :</h3>
                     <p>WordPress offre des outils intégrés pour améliorer votre référencement, mais une agence SEO peut vous aider à exploiter pleinement ces fonctionnalités et à maximiser votre visibilité en ligne.</p>
@@ -236,81 +167,47 @@ get_header();
 <section class="avantage">
     <div class="avantageContainer">
         <div class="blockAvantageAlone">
-            <?php 
-                $image_id = 21;
-                $image_url = wp_get_attachment_image_url($image_id, 'full'); 
-                $srcset = wp_get_attachment_image_srcset($image_id, 'full');
-                $sizes = '(max-width: 2560px) 100vw, 1200px';
-                $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
-
-                if ($image_url): ?>
-                    <img src="<?php echo esc_url($image_url); ?>" 
-                    srcset="<?php echo esc_attr($srcset); ?>" 
-                    sizes="<?php echo esc_attr($sizes); ?>" 
-                    alt="<?php echo esc_attr($alt_text); ?>">
-            <?php endif; ?> 
+            <?php echo get_image_html(21); ?> 
             <div class="avantageBlockTexte">
                 <h3>Une Première Impression Mémorable</h3>
                 <p>Renforcez votre crédibilité en offrant une expérience en ligne professionnelle et captivante. Un site web obsolète peut vous faire perdre des clients potentiels.</p>
             </div>
         </div>
         <div class="blockAvantageAlone">
-            <?php 
-                $image_id = 21;
-                $image_url = wp_get_attachment_image_url($image_id, 'full'); 
-                $srcset = wp_get_attachment_image_srcset($image_id, 'full');
-                $sizes = '(max-width: 2560px) 100vw, 1200px';
-                $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
-
-                if ($image_url): ?>
-                    <img src="<?php echo esc_url($image_url); ?>" 
-                    srcset="<?php echo esc_attr($srcset); ?>" 
-                    sizes="<?php echo esc_attr($sizes); ?>" 
-                    alt="<?php echo esc_attr($alt_text); ?>">
-            <?php endif; ?> 
+            <?php echo get_image_html(21); ?>
             <div class="avantageBlockTexte">
                 <h3>Positionnement sur Google et Génération de Leads</h3>
                 <p>Optimisez votre site web pour être visible sur les moteurs de recherche et attirer plus de trafic qualifié. L'importance du SEO va bien au-delà de l'esthétique du site.</p>
             </div>
         </div>
         <div class="blockAvantageAlone">
-            <?php 
-                $image_id = 21;
-                $image_url = wp_get_attachment_image_url($image_id, 'full'); 
-                $srcset = wp_get_attachment_image_srcset($image_id, 'full');
-                $sizes = '(max-width: 2560px) 100vw, 1200px';
-                $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
-
-                if ($image_url): ?>
-                    <img src="<?php echo esc_url($image_url); ?>" 
-                    srcset="<?php echo esc_attr($srcset); ?>" 
-                    sizes="<?php echo esc_attr($sizes); ?>" 
-                    alt="<?php echo esc_attr($alt_text); ?>">
-            <?php endif; ?> 
+            <?php echo get_image_html(21); ?>
             <div class="avantageBlockTexte">
                 <h3>Modernisation pour une Efficacité Accrue</h3>
                 <p>Mettez à jour votre présence en ligne pour répondre aux attentes des utilisateurs et rester compétitif. Une refonte vous permet d'adapter votre message et d'améliorer l'expérience client.</p>
             </div>
         </div>
         <div class="blockAvantageAlone">
-            <?php 
-                $image_id = 21;
-                $image_url = wp_get_attachment_image_url($image_id, 'full'); 
-                $srcset = wp_get_attachment_image_srcset($image_id, 'full');
-                $sizes = '(max-width: 2560px) 100vw, 1200px';
-                $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
-
-                if ($image_url): ?>
-                    <img src="<?php echo esc_url($image_url); ?>" 
-                    srcset="<?php echo esc_attr($srcset); ?>" 
-                    sizes="<?php echo esc_attr($sizes); ?>" 
-                    alt="<?php echo esc_attr($alt_text); ?>">
-            <?php endif; ?> 
+            <?php echo get_image_html(21); ?> 
             <div class="avantageBlockTexte">
                 <h3>Une Première Impression Mémorable</h3>
                 <p>Gardez le contrôle sur votre communication et votre visibilité en ligne en ayant votre propre site web. Contrairement aux réseaux sociaux, vous pouvez cibler votre audience et activer différentes sources de trafic à tout moment.</p>
             </div>
         </div>
+    </div>
+</section>
+
+<section class="entreprise">
+    <div class="entrepriseContainer">
+        <h2>Confiez la création de votre site web à une entreprise sérieuse et engagée.</h2>
+        <p>Novaneos et ses partenaires professionnels expérimentés sont à votre écoute pour vous proposer des solutions web sur-mesure.</p>
+        <div class="picture">
+            <?php echo get_image_html(30); ?>
+            <h3>Nathanael DETOURBE</h3>
+            <p>Dirigeant de Novaneos</p>
+        </div>
+        <p> Notre engagement qualité est notre priorité : nous respectons les délais et vous garantissons un travail de qualité. La satisfaction de nos clients est notre meilleure publicité!</p>
+        <p>Plus qu’un simple prestataire, nous sommes un véritable partenaire qui vous accompagnera dans la réussite de votre projet web.</p>
     </div>
 </section>
 

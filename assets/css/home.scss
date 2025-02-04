@@ -3,6 +3,7 @@
 // =================================================================================================================
 
 @import "variables";
+@import "fonts";
 
 //-----> Globale pour la page <-----
 
@@ -19,7 +20,7 @@
 h2 {
   color: #343f5a;
   font-family: "Poppins", Sans-serif;
-  font-size: clamp(1.375rem, 1.109rem + 1.182vw, 3rem);
+  font-size: clamp(1.5rem, 0.619rem + 3.916vw, 3.125rem);
   font-weight: 500;
   line-height: 1.3em;
   margin: 30px 0;
@@ -144,7 +145,7 @@ h2 {
   p {
     color: var(--quaternary-color);
     font-family: "Poppins", Sans-serif;
-    font-size: 16px;
+    @include fontNormal;
     font-weight: 400;
   }
   .titleService {
@@ -285,7 +286,7 @@ h2 {
         line-height: normal;
       }
       p {
-        font-size: clamp(0.875rem, 0.543rem + 1.474vw, 1.25rem);
+        @include fontNormal;
         color: var(--quaternary-color);
       }
       .littleTitle {
@@ -316,7 +317,7 @@ h2 {
   .supportContainer {
     @include flexJustify;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     padding: 100px 40px;
     .supportMain {
       display: flex;
@@ -331,7 +332,7 @@ h2 {
       }
       p {
         color: var(--quaternary-color);
-        font-size: 16px;
+        @include fontNormal;
       }
     }
   }
@@ -345,7 +346,7 @@ h2 {
       display: flex;
       flex-direction: column;
       img {
-        width: 70px;
+        width: 80px;
         margin-bottom: 10px;
       }
       .supportBlockTexte {
@@ -356,9 +357,11 @@ h2 {
         justify-content: space-between;
         h3 {
           color: var(--primary-color);
+          font-size: 22px;
         }
         p {
           color: var(--quaternary-color);
+          @include fontNormal;
         }
       }
     }
@@ -374,7 +377,7 @@ h2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     gap: 20px;
     padding: 100px 40px;
   }
@@ -400,9 +403,54 @@ h2 {
     h3 {
       color: var(--primary-color);
       margin-bottom: 16px;
+      font-size: 20px;
+    }
+    p {
+      @include fontNormal;
+      color: var(--quaternary-color);
+    }
+  }
+}
+
+//-----> Section entreprise <-----
+
+.entreprise {
+  @include flexJustify;
+  width: 100%;
+  background: var(--quinary-color);
+  .entrepriseContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+    padding: 100px 50px;
+    gap: 20px;
+    h2 {
+      text-align: center;
     }
     p {
       color: var(--quaternary-color);
+      text-align: center;
+    }
+    .picture {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      img {
+        width: 148px;
+        height: 170px;
+        border-radius: 50%;
+      }
+      h3 {
+        color: var(--primary-color);
+        font-weight: 400;
+        font-size: 16px;        
+      }
+      p {
+        font-size: 12px;
+      }
     }
   }
 }
@@ -520,5 +568,11 @@ h2 {
   }
   .avantage .avantageContainer {
     grid-template-columns: 1fr;
+  }
+  .entreprise .entrepriseContainer {
+    padding: 50px;
+    h2 {
+      margin: 0;
+    }
   }
 }
