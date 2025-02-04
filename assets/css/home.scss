@@ -2,6 +2,8 @@
 //                                                  Page Home du site
 // =================================================================================================================
 
+@import "variables";
+
 //-----> Globale pour la page <-----
 
 .littleTitle {
@@ -43,11 +45,9 @@ h2 {
 //-----> Section partenaire digital <-----
 
 .partenaire {
+  @include flexJustify;
   background-color: var(--quinary-color);
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   .partenaireContainer {
     display: grid;
     width: 80%;
@@ -97,15 +97,11 @@ h2 {
 //-----> Section Nos services <-----
 
 .services {
-  display: flex;
+  @include flexJustify;
   width: 100%;
-  justify-content: center;
-  align-items: center;
   .servicesContainer {
+    @include flexJustify;
     width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 50px;
     .servicesColonne {
       display: flex;
@@ -126,11 +122,9 @@ h2 {
   justify-content: center;
   gap: clamp(1.875rem, -1.497rem + 5.263vw, 3.125rem);
   div {
+    @include flexJustify;
     width: 30%;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-bottom: 30px;
     &:nth-child(4),
     &:nth-child(5) {
@@ -208,9 +202,7 @@ h2 {
 //-----> Section activité Web <-----
 
 .activityWeb {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flexJustify;
   width: 100%;
   background: linear-gradient(
       rgba(255, 255, 255, 0.7),
@@ -225,12 +217,10 @@ h2 {
     background-color: var(--quinary-color);
   }
   .activityWebContainer {
-    display: flex;
+    @include flexJustify;
     width: 100%;
     max-width: 1064px;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 150px 20px;
     .littleTitle {
       text-align: center;
@@ -269,18 +259,14 @@ h2 {
 //-----> Section human first <-----
 
 .humanFirst {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexJustify;
   width: 100%;
   margin: 100px 0;
   .humanFirstContainer {
-    display: flex;
+    @include flexJustify;
     margin: clamp(0rem, -6.25rem + 9.766vw, 9.375rem) 50px;
     width: 100%;
     max-width: 1330px;
-    justify-content: center;
-    align-items: center;
     gap: 40px;
     img {
       width: 35%;
@@ -324,15 +310,11 @@ h2 {
 //-----> Section support <-----
 
 .support {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexJustify;
   width: 100%;
   background-color: var(--quinary-color);
   .supportContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexJustify;
     width: 100%;
     max-width: 1200px;
     padding: 100px 40px;
@@ -383,7 +365,55 @@ h2 {
   }
 }
 
+//-----> Section Avantage <-----
+
+.avantage {
+  @include flexJustify;
+  width: 100%;
+  .avantageContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+    padding: 100px 40px;
+  }
+}
+
+.blockAvantageAlone {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px 0px rgba(117, 117, 117, 0.11);
+  padding: 30px;
+  img {
+    width: 70px;
+    margin-bottom: 10px;
+  }
+  .avantageBlockTexte {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    h3 {
+      color: var(--primary-color);
+      margin-bottom: 16px;
+    }
+    p {
+      color: var(--quaternary-color);
+    }
+  }
+}
+
 //-----> Section responsive <-----
+
+@media (max-width: 1150px) {
+  .avantage .avantageContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 @media (max-width: 1024px) {
   .topServices {
@@ -487,5 +517,8 @@ h2 {
         width: 100%;
       }
     }
+  }
+  .avantage .avantageContainer {
+    grid-template-columns: 1fr;
   }
 }

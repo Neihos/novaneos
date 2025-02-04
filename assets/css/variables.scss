@@ -1,3 +1,13 @@
+//-----> Partie mixin <-----
+
+@mixin flexJustify {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//-----> Partie animations <-----
+
 @mixin opa {
     from {
         opacity: 0;

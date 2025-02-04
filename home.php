@@ -233,4 +233,85 @@ get_header();
     </div>
 </section>
 
+<section class="avantage">
+    <div class="avantageContainer">
+        <div class="blockAvantageAlone">
+            <?php 
+                $image_id = 21;
+                $image_url = wp_get_attachment_image_url($image_id, 'full'); 
+                $srcset = wp_get_attachment_image_srcset($image_id, 'full');
+                $sizes = '(max-width: 2560px) 100vw, 1200px';
+                $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+
+                if ($image_url): ?>
+                    <img src="<?php echo esc_url($image_url); ?>" 
+                    srcset="<?php echo esc_attr($srcset); ?>" 
+                    sizes="<?php echo esc_attr($sizes); ?>" 
+                    alt="<?php echo esc_attr($alt_text); ?>">
+            <?php endif; ?> 
+            <div class="avantageBlockTexte">
+                <h3>Une Première Impression Mémorable</h3>
+                <p>Renforcez votre crédibilité en offrant une expérience en ligne professionnelle et captivante. Un site web obsolète peut vous faire perdre des clients potentiels.</p>
+            </div>
+        </div>
+        <div class="blockAvantageAlone">
+            <?php 
+                $image_id = 21;
+                $image_url = wp_get_attachment_image_url($image_id, 'full'); 
+                $srcset = wp_get_attachment_image_srcset($image_id, 'full');
+                $sizes = '(max-width: 2560px) 100vw, 1200px';
+                $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+
+                if ($image_url): ?>
+                    <img src="<?php echo esc_url($image_url); ?>" 
+                    srcset="<?php echo esc_attr($srcset); ?>" 
+                    sizes="<?php echo esc_attr($sizes); ?>" 
+                    alt="<?php echo esc_attr($alt_text); ?>">
+            <?php endif; ?> 
+            <div class="avantageBlockTexte">
+                <h3>Positionnement sur Google et Génération de Leads</h3>
+                <p>Optimisez votre site web pour être visible sur les moteurs de recherche et attirer plus de trafic qualifié. L'importance du SEO va bien au-delà de l'esthétique du site.</p>
+            </div>
+        </div>
+        <div class="blockAvantageAlone">
+            <?php 
+                $image_id = 21;
+                $image_url = wp_get_attachment_image_url($image_id, 'full'); 
+                $srcset = wp_get_attachment_image_srcset($image_id, 'full');
+                $sizes = '(max-width: 2560px) 100vw, 1200px';
+                $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+
+                if ($image_url): ?>
+                    <img src="<?php echo esc_url($image_url); ?>" 
+                    srcset="<?php echo esc_attr($srcset); ?>" 
+                    sizes="<?php echo esc_attr($sizes); ?>" 
+                    alt="<?php echo esc_attr($alt_text); ?>">
+            <?php endif; ?> 
+            <div class="avantageBlockTexte">
+                <h3>Modernisation pour une Efficacité Accrue</h3>
+                <p>Mettez à jour votre présence en ligne pour répondre aux attentes des utilisateurs et rester compétitif. Une refonte vous permet d'adapter votre message et d'améliorer l'expérience client.</p>
+            </div>
+        </div>
+        <div class="blockAvantageAlone">
+            <?php 
+                $image_id = 21;
+                $image_url = wp_get_attachment_image_url($image_id, 'full'); 
+                $srcset = wp_get_attachment_image_srcset($image_id, 'full');
+                $sizes = '(max-width: 2560px) 100vw, 1200px';
+                $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+
+                if ($image_url): ?>
+                    <img src="<?php echo esc_url($image_url); ?>" 
+                    srcset="<?php echo esc_attr($srcset); ?>" 
+                    sizes="<?php echo esc_attr($sizes); ?>" 
+                    alt="<?php echo esc_attr($alt_text); ?>">
+            <?php endif; ?> 
+            <div class="avantageBlockTexte">
+                <h3>Une Première Impression Mémorable</h3>
+                <p>Gardez le contrôle sur votre communication et votre visibilité en ligne en ayant votre propre site web. Contrairement aux réseaux sociaux, vous pouvez cibler votre audience et activer différentes sources de trafic à tout moment.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <?php get_footer(); ?>

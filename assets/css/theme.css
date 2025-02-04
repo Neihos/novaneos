@@ -5,36 +5,6 @@
   font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
-@keyframes fadeInLeft {
-  0% {
-    transform: translateX(-300px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes fadeInRight {
-  0% {
-    transform: translateX(300px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes fadeInDown {
-  0% {
-    transform: translateY(-300px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 .accueil {
   width: 100%;
   max-height: 100vh;
@@ -188,6 +158,36 @@
     display: none;
   }
 }
+@keyframes fadeInLeft {
+  0% {
+    transform: translateX(-300px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(300px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    transform: translateY(-300px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .littleTitle {
   color: #0b50fe;
   font-family: "Poppins", Sans-serif;
@@ -223,11 +223,11 @@ h2 {
 }
 
 .partenaire {
-  background-color: var(--quinary-color);
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--quinary-color);
+  width: 100%;
 }
 .partenaire .partenaireContainer {
   display: grid;
@@ -277,15 +277,15 @@ h2 {
 
 .services {
   display: flex;
-  width: 100%;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 .services .servicesContainer {
-  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 80%;
   margin-bottom: 50px;
 }
 .services .servicesContainer .servicesColonne {
@@ -306,11 +306,11 @@ h2 {
   gap: clamp(1.875rem, -1.497rem + 5.263vw, 3.125rem);
 }
 .topServices div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 30%;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-bottom: 30px;
 }
 .topServices div:nth-child(4), .topServices div:nth-child(5) {
@@ -384,8 +384,8 @@ h2 {
 
 .activityWeb {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 100%;
   background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/map.webp") no-repeat center/cover;
   position: relative;
@@ -398,11 +398,11 @@ h2 {
 }
 .activityWeb .activityWebContainer {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   max-width: 1064px;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   padding: 150px 20px;
 }
 .activityWeb .activityWebContainer .littleTitle {
@@ -453,11 +453,11 @@ h2 {
 }
 .humanFirst .humanFirstContainer {
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin: clamp(0rem, -6.25rem + 9.766vw, 9.375rem) 50px;
   width: 100%;
   max-width: 1330px;
-  justify-content: center;
-  align-items: center;
   gap: 40px;
 }
 .humanFirst .humanFirstContainer img {
@@ -557,6 +557,53 @@ h2 {
   color: var(--quaternary-color);
 }
 
+.avantage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.avantage .avantageContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  width: 100%;
+  max-width: 1200px;
+  gap: 20px;
+  padding: 100px 40px;
+}
+
+.blockAvantageAlone {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px 0px rgba(117, 117, 117, 0.11);
+  padding: 30px;
+}
+.blockAvantageAlone img {
+  width: 70px;
+  margin-bottom: 10px;
+}
+.blockAvantageAlone .avantageBlockTexte {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.blockAvantageAlone .avantageBlockTexte h3 {
+  color: var(--primary-color);
+  margin-bottom: 16px;
+}
+.blockAvantageAlone .avantageBlockTexte p {
+  color: var(--quaternary-color);
+}
+
+@media (max-width: 1150px) {
+  .avantage .avantageContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (max-width: 1024px) {
   .topServices {
     flex-direction: column;
@@ -657,6 +704,9 @@ h2 {
   }
   .support .supportContainer .blockSupport .blockSupportAlone {
     width: 100%;
+  }
+  .avantage .avantageContainer {
+    grid-template-columns: 1fr;
   }
 }
 :root {
