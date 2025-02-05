@@ -9,20 +9,28 @@ Template Name: Contact
  * @subpackage novaneos theme
  * @since novaneos 1.0
  */
-get_header(); ?>
 
-<div id="primary" class="content-area">
-    <main id="main" class="site-main">
-        <?php
-        while (have_posts()) :
-            the_post();
-            get_template_part('template-parts/content', 'page');
-        endwhile;
-        ?>
-        <h1>test pour voir</h1>
-    </main><!-- #main -->
-</div><!-- #primary -->
+// Inclure le fichier avec les données des médias photos
+include('template_parts/home_parts.php');
 
+get_header(); 
+?>
+<div id="contactContainer">
+    <div class="illustrationContact">
+        <?php echo get_image_html(38); ?>
+    </div>
+    <div class="moyenDeContact">
+        <div class="formulaire">
+            <?php 
+                // Affiche le formulaire Contact Form 7 avec l'ID ou le titre
+                echo do_shortcode('[contact-form-7 id="76c77e5" title="Formulaire de contact 1"]'); 
+            ?>
+        </div>
+        <div class="infoEntreprise">
+            <?php echo get_image_html(21); ?>
+        </div>
+    </div>
+</div>
 <?php
 get_sidebar();
 get_footer();

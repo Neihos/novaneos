@@ -11,11 +11,15 @@
 
 get_header(); 
 
-// Inclure le fichier avec les données du logo
+// Inclure le fichier avec les données des médias photos
 include('template_parts/home_parts.php');
 ?>
 
-<div class="main-container">
+<div class="home-container">
+
+<section class="accueil">
+    <?php echo get_image_html(29); ?>
+</section>
 
 <section class="citation">    
         <p>
@@ -119,7 +123,7 @@ include('template_parts/home_parts.php');
             <h3 class="littleTitle">L'humain avant tout</h3>
             <h2>Vous êtes intéressé par nos services web, mais vous appréciez le contact direct ?</h2>
             <p>Nous sommes sur la même longueur d’onde ! Ne perdez plus de temps, contactez-nous dès maintenant par téléphone ou remplissez notre formulaire en ligne.</p>
-            <a class="contactUs" href="http://">Formulaire en ligne</a>
+            <a class="contactUs" href="/contact/">Formulaire en ligne</a>
         </div>
     </div>
 </section>

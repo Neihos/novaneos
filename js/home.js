@@ -3,39 +3,39 @@
 // =================================================================================================================
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (document.querySelector(".main-container")) {
+  if (document.querySelector(".home-container")) {
 
     // Fonction pour l'animation des cubes de la section nos services
 
     function cubeMove() {
       const cubeElements = document.querySelectorAll(".cubeNovaneos");
+      const serviceElement = document.querySelector(".topServices");
+
+      if (!serviceElement || cubeElements.length === 0) return;
 
       const observerOptions = {
         root: null,
-        threshold: 1, // 100% du cube visible
+        threshold: 0.8,
         rootMargin: "0px 0px -5% 0px",
       };
 
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const cubeElement = entry.target;
+            cubeElements.forEach((cube) => {
+              cube.classList.add("move");
+            });
 
-            // Lancer l'animation pour le cube visible
-            cubeElement.classList.add("move");
-
-            // Stopper l'observation après le déclenchement
-            observer.unobserve(cubeElement);
+            observer.unobserve(serviceElement);
           }
         });
       }, observerOptions);
 
-      // Ajouter l'observateur à chaque cube
-      cubeElements.forEach((cubeElement) => {
-        observer.observe(cubeElement);
-      });
+      observer.observe(serviceElement);
     }
+
     cubeMove();
+
 
     function pourcentUp() {
       const pourcentElements = [
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const observerOptions = {
         root: null,
-        threshold: 1, // 100% de l'élément visible
+        threshold: 0.9,
         rootMargin: "0px 0px -5% 0px",
       };
 
@@ -99,5 +99,37 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     pourcentUp();
+
+    // Animations section support
+
+    function blockDown() {
+      const blockElements = document.querySelectorAll(".blockSupportAlone, .blockAvantageAlone");
+
+      const observerOptions = {
+        root: null,
+        threshold: 0.9,
+        rootMargin: "0px 0px -5% 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const blockElement = entry.target;
+
+            // Lancer l'animation pour le block visible
+            blockElement.classList.add("down");
+
+            // Stopper l'observation après le déclenchement
+            observer.unobserve(blockElement);
+          }
+        });
+      }, observerOptions);
+
+      // Ajouter l'observateur à chaque block
+      blockElements.forEach((blockElement) => {
+        observer.observe(blockElement);
+      });
+    }
+    blockDown();
   }
 });

@@ -6,18 +6,35 @@
 }
 
 @import "header";
+@import "footer";
 @import "home";
+@import "page_contact";
 @import "fonts";
 @import "variables";
 
 :root {
   --primary-color: #343f5a;
-  --secondary-color: #4f80ff;
+  --secondary-color: #064cfe;
   --tertiary-color: #0693e3;
   --quaternary-color: #616161;
   --quinary-color: rgba(0, 85, 255, 0.1215686275);
 }
 
+// Scrollbar
+html {
+  scrollbar-color: var(--primary-color) rgba(16, 35, 206, 0.26);
+}
+
 .hiddenNow {
   display: none;
+}
+
+@media (max-width: 1024px) {
+  .hide-scrollbar {
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+  }
 }
