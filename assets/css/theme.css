@@ -497,25 +497,6 @@
   font-style: italic;
   src: url(/wp-content/themes/novaneos/assets/fonts/Poppins-BoldItalic.ttf);
 }
-.littleTitle {
-  color: #0b50fe;
-  font-family: "Poppins", Sans-serif;
-  font-size: clamp(1rem, 0.98rem + 0.091vw, 1.125rem);
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.9px;
-  padding-top: 50px;
-}
-
-h2 {
-  color: #343f5a;
-  font-family: "Poppins", Sans-serif;
-  font-size: clamp(1.5rem, 0.619rem + 3.916vw, 3.125rem);
-  font-weight: 500;
-  line-height: 1.3em;
-  margin: 30px 0;
-}
-
 .accueil {
   width: 100%;
   max-height: 100vh;
@@ -1146,13 +1127,13 @@ h2 {
     box-shadow: 0 0 0 0 rgba(218, 103, 68, 0);
   }
 }
-#contactContainer {
+#contact-container {
   display: flex;
   width: 100%;
   flex-direction: column;
   align-items: center;
 }
-#contactContainer .illustrationContact {
+#contact-container .illustrationContact {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1160,7 +1141,7 @@ h2 {
   max-width: 1200px;
   margin-top: 170px;
 }
-#contactContainer .illustrationContact img {
+#contact-container .illustrationContact img {
   width: 800px;
 }
 
@@ -1242,6 +1223,156 @@ h2 {
   }
   .infoEntreprise {
     width: 90%;
+  }
+}
+@keyframes moveInLeft {
+  0% {
+    transform: translateX(-300px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes moveInRight {
+  0% {
+    transform: translateX(300px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes moveInDown {
+  0% {
+    transform: translateY(-300px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes pulse512 {
+  0% {
+    box-shadow: 0 0 0 0 rgba(5, 186, 218, 0.6705882353);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(218, 103, 68, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(218, 103, 68, 0);
+  }
+}
+#conception-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 50px;
+  margin-bottom: 50px;
+}
+#conception-container .titleContact {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 170px;
+}
+#conception-container .explicationTop {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  gap: 40px;
+  margin: 50px;
+}
+#conception-container .explicationTop img {
+  width: 100%;
+  max-width: 560px;
+}
+#conception-container .explicationBottom {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  max-width: 1200px;
+  gap: 40px;
+  margin: 50px;
+}
+
+.imgExplication {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+.imgExplication img {
+  -o-object-fit: cover/center;
+     object-fit: cover/center;
+  width: 100%;
+}
+
+.explicationText {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+.explicationText .blockExplication {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 40px;
+  margin: 20px;
+}
+.explicationText .blockExplication i {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 45px;
+  border-radius: 5px;
+  background-color: var(--tertiary-color);
+}
+.explicationText .blockExplication .textExplication {
+  width: 100%;
+}
+.explicationText .blockExplication .textExplication h3 {
+  padding-bottom: 8px;
+  font-weight: 500;
+}
+.explicationText .blockExplication .textExplication p {
+  color: var(--quaternary-color);
+}
+
+@media (max-width: 767px) {
+  #conception-container .explicationTop,
+  #conception-container .explicationBottom {
+    flex-direction: column;
+  }
+  .explicationText {
+    width: 100%;
+    margin: 20px 0;
+  }
+  .explicationText .blockExplication {
+    margin: 0;
+    margin-top: 40px;
+    flex-direction: column;
+  }
+  .imgExplication {
+    width: 100%;
   }
 }
 /* Poppins font-face declarations */
@@ -1436,6 +1567,23 @@ html {
 
 .hiddenNow {
   display: none;
+}
+
+.littleTitle {
+  color: #0b50fe;
+  font-size: clamp(1rem, 0.98rem + 0.091vw, 1.125rem);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+  padding-top: 50px;
+}
+
+h2 {
+  color: #343f5a;
+  font-size: clamp(1.5rem, 0.619rem + 3.916vw, 3.125rem);
+  font-weight: 500;
+  line-height: 1.3em;
+  margin: 30px 0;
 }
 
 @media (max-width: 1024px) {

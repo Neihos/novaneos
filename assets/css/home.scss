@@ -5,27 +5,6 @@
 @import "variables";
 @import "fonts";
 
-//-----> Globale pour la page <-----
-
-.littleTitle {
-  color: #0b50fe;
-  font-family: "Poppins", Sans-serif;
-  font-size: clamp(1rem, 0.98rem + 0.091vw, 1.125rem);
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.9px;
-  padding-top: 50px;
-}
-
-h2 {
-  color: #343f5a;
-  font-family: "Poppins", Sans-serif;
-  font-size: clamp(1.5rem, 0.619rem + 3.916vw, 3.125rem);
-  font-weight: 500;
-  line-height: 1.3em;
-  margin: 30px 0;
-}
-
 //-----> Gestion du fond d'écran <-----
 
 .accueil {

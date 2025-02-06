@@ -15,7 +15,7 @@ include('template_parts/home_parts.php');
 
 get_header(); 
 ?>
-<div id="contactContainer">
+<div id="contact-container">
     <div class="illustrationContact">
         <?php echo get_image_html(38); ?>
     </div>
